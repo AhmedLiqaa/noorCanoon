@@ -1,0 +1,147 @@
+// Normalize Styles
+@import node_modules/normalize.css/normalize
+@import node_modules/bootstrap-sass-official/scss/bootstrap
+
+// Import Modules
+@import ../_modules/link/link
+@import var
+
+// Box sizing partial styles:
+// Apply a natural box layout model to all elements
+*,
+*:before,
+*:after
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+body
+  height: 100vh
+  width: 100%
+
+//HEADER SECTION
+
+header
+  .home
+    > div
+      width: 50px
+      height: 50px
+      position: fixed
+      top: 45px
+      left: 45px
+  .nav
+    width: 45px
+    height: 45px
+    position: fixed
+    cursor: pointer
+    text-align: left
+    outline: none
+    border: none
+    right: 60px
+    top: 50%
+    transform: translateY(-50%)
+    background: transparent
+    z-index: 22
+    span
+      display: block
+      height: 1px
+      background: $main-color
+      position: relative
+      transition: width .6s,opacity .5s, background-color .5s cubic-bezier(0.46, 0.03, 0.52, 0.96)
+    &__up
+      width: 100%
+      margin: 6px 0 6px 0
+      float: right
+      transform-origin: right
+    &__down
+      width: 55%
+      float: right
+      transform-origin: right
+  .nav
+    &:hover
+      span
+        width: 80%
+  .nav.is-active
+    .nav__down
+      opacity: 0
+    > span
+      background-color: $sub-color
+  .menu
+    background-color: $main-color
+    width: 70%
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    transform: translateX(105%)
+    transition: transform .6s cubic-bezier(0.46, 0.03, 0.52, 0.96)
+  .menu.is-active
+    transform: translateX(0%)
+  .main-social
+    position: fixed
+    bottom: 60px
+    left: 75px
+    z-index: 10
+    transform: translateY(2px)
+    &__button
+      width: 20px
+      height: 20px
+      outline: none
+      border: none
+      background: transparent
+      cursor: pointer
+      position: relative
+      display: inline-block
+      vertical-align: middle
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        left: 50%
+        top: 0
+        background: $main-color
+        height: 100%
+        width: 1px
+        transition: background .5s, transform .6s cubic-bezier(0.46, 0.03, 0.52, 0.96)
+      &::after
+        content: ''
+        display: block
+        position: absolute
+        background: $main-color
+        height: 1px
+        width: 100%
+        top: 50%
+        left: 0
+        transition: background .5s cubic-bezier(0.46, 0.03, 0.52, 0.96)
+      .sr-only
+        position: absolute
+        width: 1px
+        height: 1px
+        padding: 0
+        overflow: hidden
+        border: 0
+        white-space: nowrap
+  .main-social.is-open
+    .main-social__button::before
+      transform: rotate(90deg)
+    .main-social__button::before,
+    .main-social__button::after
+      background: $sub-color
+
+.main-wrapper,.scroll-content,.main-screen,.home,.main-screen,.main-screen-row
+  min-height: 100vh
+
+.main-screen-row
+  width: 100%
+  display: flex
+  flex-direction: row
+  justify-content: center
+
+.main-screen__left
+  min-height: 100vh
+  width: 60%
+  background-color: #002200
+.main-screen__right
+  min-height: 100vh
+  width: 40%
+  background-color: #d3d2ff

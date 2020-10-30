@@ -1,0 +1,42 @@
+{% extends '_layouts/base.nunjucks' %}
+
+{% import "_modules/link/link.nunjucks" as link %}
+
+{% block content %}
+<header>
+  <a class="home" href="#">
+    <div>
+      <img src="/images/logo_color.svg" alt="">
+    </div>
+  </a>
+  <button class="nav toggle-menu">
+    <span class="nav__up"></span>
+    <span class="nav__down"></span>
+  </button>
+
+  <div class="menu">
+
+  </div>
+  <div class="main-social">
+    <button class="main-social__button">
+      <span class="sr-only">
+        +
+      </span>
+    </button>
+  </div>
+</header>
+<main class="main-wrapper">
+  <div class="js-scroll-container">
+    <div class="scroll-content">
+      <div class="home">
+        <div class="main-screen">
+          <div class="main-screen-row">
+            <div class="main-screen__left"></div>
+            <div class="main-screen__right"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
