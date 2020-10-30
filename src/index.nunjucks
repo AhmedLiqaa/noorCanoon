@@ -15,7 +15,28 @@
   </button>
 
   <div class="menu">
-
+    <div class="container-fluid menu__container">
+      <div class="menu__row row">
+        <div class="col-lg-6 menu__col-left">
+          <ul class="navigation">
+            <li class="navigation__item js-hover-links"><a class="navigation__link" href="#">المنتجات</a></li>
+            <li class="navigation__item js-hover-links"><a class="navigation__link" href="#">عن الشركة</a></li>
+            <li class="navigation__item js-hover-links"><a class="navigation__link" href="#">اقكار جديدة</a></li>
+            <li class="navigation__item js-hover-links"><a class="navigation__link" href="#">الاتصال بنا</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-6 menu__col-right">
+          <div class="menu__col-right-inner">
+            <div class="mb-30">
+              <a class="buttom" href="">noorcanoon@gmail.com</a>
+            </div>
+            <div class="mb-30">
+              <a class="buttom" href="">+33 (0)6 67 35 26 44</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="main-social">
     <button class="main-social__button">

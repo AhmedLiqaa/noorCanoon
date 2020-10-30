@@ -9,7 +9,6 @@ import $ from 'jquery';
 import {
   Link
 } from '../_modules/link/link';
-import bootstrap from 'bootstrap'
 
 // $(() => {
 //   new Link(); // Activate Link modules logic
@@ -22,6 +21,7 @@ import bootstrap from 'bootstrap'
     const toggleMenu = _('.nav')
     const mainMenu = _('.menu')
     const btnSocial = _('.main-social')
+    const hoverLinks = _('.js-hover-links')
 
     toggleMenu.on('click', function () {
       _(this).toggleClass('is-active')
@@ -32,7 +32,15 @@ import bootstrap from 'bootstrap'
       _(this).toggleClass('is-open');
     })
 
+    hoverLinks.hover(function () {
 
+      hoverLinks.addClass('is-not-hover')
+      _(this).removeClass('is-not-hover').addClass('is-hover')
+
+
+    }, function () {
+      hoverLinks.removeClass('is-not-hover is-hover')
+    });
 
   });
 })($);
