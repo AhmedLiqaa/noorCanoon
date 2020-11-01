@@ -3,7 +3,6 @@
 @import node_modules/bootstrap/scss/bootstrap
 
 // Import Modules
-@import ../_modules/link/link
 @import var
 
 // Box sizing partial styles:
@@ -81,6 +80,7 @@ header
   top: 0
   right: 0
   bottom: 0
+  z-index: 21
   transform: translateX(105%)
   transition: transform .8s cubic-bezier(.25,.05,.1,.94)
 .menu.is-active
@@ -96,6 +96,7 @@ header
     position: absolute
     left: 50%
     opacity: .1
+    transition: transform .6s cubic-bezier(.5,.05,.7,.2) .6s
   .navigation
     list-style: none
     counter-reset: li
@@ -106,7 +107,7 @@ header
       display: block
       font-size: 3vw
       text-align: right
-      transition: all .6s cubic-bezier(0.46, 0.03, 0.52, 0.96)
+      transition: color 1s cubic-bezier(.2,.6,.35,1)
       &::after
         counter-increment: li
         content: "."counter(li, decimal-leading-zero)
@@ -238,23 +239,117 @@ header
   .main-social__button::after
     background: $sub-color
 
-.main-wrapper,
-.scroll-content,
-.main-screen,
-.home,
-.main-screen,
-.main-screen-row
+.main-wrapper
+  height: 100%
+  .js-scroll-container
+    overflow: hidden
+    min-height: 100vh
+    height: 100%
+    width: 100%
+    transform: none
+    .scroll-content
+      min-height: 100%
+.main-screen
   min-height: 100vh
+  position: relative
+  margin-bottom: 75vh
 
 .main-screen-row
-  width: 100%
   display: flex
+  flex-wrap: wrap
   flex-direction: row
-  justify-content: center
+  min-height: 100vh
 
-.main-screen__left
-  min-height: 100vh
-  width: 60%
-.main-screen__right
-  min-height: 100vh
-  width: 40%
+.main-screen__col-left
+  width: 100%
+.main-screen__col-right,
+.main-screen__col-right img
+  width: 100%
+
+@media (min-width: 992px)
+  .main-screen__col-left
+    flex: 0 0 58%
+    max-width: 58%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+  .main-screen__col-right
+    flex: 0 0 42%
+    max-width: 42%
+    height: auto
+
+  .main-title-box
+    position: absolute
+    left: 0
+    width: 100%
+    text-align: center
+    z-index: 1
+
+.main-title
+  display: inline-block
+  color: $main-color
+  font-family: Arial, Helvetica, sans-serif
+  font-size: 7.95vw
+  line-height: 1.08
+  letter-spacing: .02em
+  margin-bottom: 60px
+.title-box-wrapper
+  display: block
+  overflow: hidden
+.title
+  display: block
+.small-title
+  display: block
+  color: $main-color
+  font-size: 1.3rem
+  letter-spacing: .9em
+  text-indent: .9em
+  text-transform: uppercase
+  text-align: center
+  font-family: Arial, Helvetica, sans-serif
+
+.blockqoute
+  margin-bottom: 180px
+  text-align: center
+  color: $main-color
+  &__text
+    font-family: Arial, Helvetica, sans-serif
+.button
+  display: inline-block
+  font-size: .8rem
+  letter-spacing: .2em
+  text-indent: .4em
+  text-transform: uppercase
+  position: relative
+  transition: color .5s ease
+  text-decoration: none
+  font-family: Arial, Helvetica, sans-serif
+  &::before
+    content: ''
+    position: absolute
+    background: currentColor
+    left: 0
+    bottom: -3px
+    width: 100%
+    height: 1px
+    transition: transform .5s ease-out
+  &:hover
+    &::before
+      transform: scale(1.2)
+
+//OVERLAY DIV main-overlay
+
+.main-overlay
+  //background: black
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  width: 100%
+  height: 100%
+  z-index: 1
+  display: none
+.main-overlay.is-active
+  display: block

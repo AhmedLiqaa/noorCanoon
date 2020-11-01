@@ -7,3 +7,26 @@ $link-hover: #e3a39c
 
 body
     font-family: 'Vibes', cursive
+    margin: 0
+    padding: 0
+    font-size: 1.6rem
+    line-height: normal
+    position: relative
+    transition: background-color 1.3s cubic-bezier(.25,.05,.1,.94)
+
+a, a:focus, a:hover
+    outline: none
+    text-decoration: none
+    color: currentColor
+
+@media   ( min-width: 768px )
+    .no-js body
+        //overflow: hidden
+        height: 100%
+@media   ( min-width: 992px )
+    .no-js body
+        //overflow: hidden
+        height: 100%
+
+.text-center
+    text-align: center

@@ -29,32 +29,34 @@ import {
     const hoverLinks = _('.js-hover-links')
     const menuItem = _('.js-menu-item')
     const infoItems = _('.js-infos-item')
+    const overlayDiv = _('.js-main-overlay')
 
 
-    console.log(menuItem);
-
+    // START SIDE MENU ANIMATION JS 
     function toggleMenu() {
       mainMenu.toggleClass('is-active'),
 
         //FOR OVERLAY FIXED DIV
         setTimeout(() => {
-          toggleBtnMenu.toggleClass('is-active');
-        }, 1e3);
-
+          toggleBtnMenu.toggleClass('is-active'),
+            overlayDiv.toggleClass('is-active')
+        }, 1e3)
 
     }
 
     function closeMenu() {
       mainMenu.removeClass('is-active');
       toggleBtnMenu.removeClass('is-active');
+      overlayDiv.removeClass('is-active')
     }
 
     function menuItemFade() {
       var itemTransition = new TimelineMax();
 
+
       itemTransition.staggerFromTo(menuItem, 1.2, {
         opacity: 0,
-        xPercent: -20
+        xPercent: 20
       }, {
         opacity: 1,
         xPercent: 0,
@@ -74,25 +76,6 @@ import {
       }, .2, 1)
     }
 
-
-    function init() {
-
-      toggleBtnMenu.on('click', function () {
-        toggleMenu(),
-          mainMenu.hasClass('is-active') && ((menuItemFade()), (infoItemsFade()))
-      })
-    }
-    init();
-
-
-
-
-
-
-    btnSocial.on('click', function () {
-      _(this).toggleClass('is-open');
-    })
-
     hoverLinks.hover(function () {
 
       hoverLinks.addClass('is-not-hover')
@@ -102,6 +85,28 @@ import {
     }, function () {
       hoverLinks.removeClass('is-not-hover is-hover')
     });
+
+    function init() {
+
+      toggleBtnMenu.on('click', function () {
+          toggleMenu(),
+            mainMenu.hasClass('is-active') && (menuItemFade(), infoItemsFade())
+        }),
+        overlayDiv.on('click', function () {
+          closeMenu();
+        })
+    }
+    init();
+
+    // END SIDE MENU ANIMATION JS 
+
+
+
+    btnSocial.on('click', function () {
+      _(this).toggleClass('is-open');
+    })
+
+
 
 
   });
