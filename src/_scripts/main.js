@@ -6,19 +6,7 @@
 import 'core-js';
 import 'regenerator-runtime/runtime';
 import $ from 'jquery';
-import {
-  gsap,
-  TimelineMax,
-  TweenMax
-} from 'gsap'
-import {
-  Link
-} from '../_modules/link/link';
-
-// $(() => {
-//   new Link(); // Activate Link modules logic
-//   console.log('Welcome to Yeogurt!');
-// });
+import Scrollbar from 'smooth-scrollbar';
 
 
 (function (_) {
@@ -30,6 +18,15 @@ import {
     const menuItem = _('.js-menu-item')
     const infoItems = _('.js-infos-item')
     const overlayDiv = _('.js-main-overlay')
+    const mainTitle = _('.js-main-title')
+    const mainScreen = _('.main-screen')
+    const windowCenter = _(window).outerHeight() / 2;
+    const mainScreenTrigger = _('.mainscreen-trigger')
+
+
+
+    //MAIN TITLE ANIMATION START
+
 
 
     // START SIDE MENU ANIMATION JS 
@@ -107,7 +104,9 @@ import {
     })
 
 
-
+    Scrollbar.init(document.querySelector('.js-scroll-container'), {
+      renderByPixels: !0
+    });
 
   });
 })($);

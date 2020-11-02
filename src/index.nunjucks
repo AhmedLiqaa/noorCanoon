@@ -52,40 +52,38 @@
 </header>
 <div class="main-wrapper">
   <main class="js-scroll-container">
-    <div class="scroll-content">
-      <div class="home">
-        <div class="main-screen">
-          <div class="main-screen-row">
-            <div class="main-screen__col-left">
-              <h1 class="main-title-box js-main-title">
-                <span class="main-title">
+    <div class="home">
+      <div class="main-screen">
+        <div class="main-screen-row">
+          <div class="main-screen__col-left">
+            <h1 class="main-title-box js-main-title">
+              <span class="main-title">
+                <span class="title-box-wrapper">
+                  <span class="title">Noor</spanc>
+                  </span>
                   <span class="title-box-wrapper">
-                    <span class="title">Noor</spanc>
-                    </span>
-                    <span class="title-box-wrapper">
-                      <span class="title">Canoon</span>
-                    </span>
+                    <span class="title">Canoon</span>
                   </span>
                 </span>
-                <small class="small-title">cosmetic company</small>
-              </h1>
-            </div>
-            <div class="main-screen__col-right"></div>
+              </span>
+              <small class="small-title">cosmetic company</small>
+            </h1>
           </div>
-          <div class="mainscreen-trigger"></div>
-          <div class="blockqoute">
-            <div class="container">
-              <div class="blockqoute__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio est aliquid voluptatem eos quas
-                quos nam repudiandae laboriosam iure omnis veritatis officiis, praesentium error accusamus incidunt modi
-                animi rem architecto.Voluptates quia adipisci nisi dignissimos, iure cum sequi aliquam? Saepe expedita
-                quam et odio non quas ducimus soluta dignissimos, minus nisi illo quaerat, magni quis impedit enim
-                blanditiis fugit eveniet.
-              </div>
-              <a href="" class="button js-link">
-                products
-              </a>
+          <div class="main-screen__col-right"></div>
+        </div>
+        <div class="mainscreen-trigger"></div>
+        <div class="blockqoute">
+          <div class="container">
+            <div class="blockqoute__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio est aliquid voluptatem eos quas
+              quos nam repudiandae laboriosam iure omnis veritatis officiis, praesentium error accusamus incidunt modi
+              animi rem architecto.Voluptates quia adipisci nisi dignissimos, iure cum sequi aliquam? Saepe expedita
+              quam et odio non quas ducimus soluta dignissimos, minus nisi illo quaerat, magni quis impedit enim
+              blanditiis fugit eveniet.
             </div>
+            <a href="" class="button js-link">
+              products
+            </a>
           </div>
         </div>
       </div>
