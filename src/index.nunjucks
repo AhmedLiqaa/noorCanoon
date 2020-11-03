@@ -68,10 +68,17 @@
               </span>
               <small class="small-title">cosmetic company</small>
             </h1>
+            <div class="mainscreen-col-left-img mainsscreen-col-img js-mainscreen-col-img">
+              <img class="img-fluid" src="/images/accueil-2-1588086932.jpg" alt="">
+            </div>
           </div>
-          <div class="main-screen__col-right"></div>
+          <div class="main-screen__col-right">
+            <img class="img-fluid" src="/images/accueil-4-1588086461.jpg" alt="">
+          </div>
         </div>
-        <div class="mainscreen-trigger"></div>
+        
+      </div>  <!-- mainscreen END -->
+      <div class="mainscreen-trigger"></div>
         <div class="blockqoute">
           <div class="container">
             <div class="blockqoute__text">
@@ -86,7 +93,6 @@
             </a>
           </div>
         </div>
-      </div>
     </div>
   </main>
 </div>

@@ -338,6 +338,40 @@ header
     &::before
       transform: scale(1.2)
 
+
+// MAIN COL IMGS
+
+
+.mainscreen-col-left-img
+ display: inline-block
+ position: relative
+ z-index: 1
+
+@media (min-width: 992px)
+  .mainscreen-col-left-img
+    max-width: 45%
+    opacity: .9
+
+.img-fluid
+  max-width: 100%
+  height: auto
+
+@media (min-width: 992px)
+  .mainscreen-col-right
+    flex: 0 0 42%
+    max-width: 42%
+    height: auto
+
+.mainscreen-col-right
+  position: relative
+  text-align: right
+  width: 100%
+  img
+    width: 100%
+
+
+
+
 //OVERLAY DIV main-overlay
 
 .main-overlay
