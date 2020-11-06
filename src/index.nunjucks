@@ -32,10 +32,10 @@
         <div class="col-lg-6 menu__col-right">
           <div class="menu__col-right-inner">
             <div class="mb-30">
-              <a class="buttom js-infos-item" href="">noorcanoon@gmail.com</a>
+              <a class="button js-infos-item" href="">noorcanoon@gmail.com</a>
             </div>
             <div class="mb-30">
-              <a class="buttom js-infos-item" href="">+33 (0)6 67 35 26 44</a>
+              <a class="button js-infos-item" href="">+33 (0)6 67 35 26 44</a>
             </div>
           </div>
         </div>
@@ -61,9 +61,9 @@
                 <span class="title-box-wrapper">
                   <span class="title">Noor</spanc>
                   </span>
-                  <span class="title-box-wrapper">
-                    <span class="title">Canoon</span>
-                  </span>
+                </span>
+                <span class="title-box-wrapper">
+                  <span class="title">Canoon</span>
                 </span>
               </span>
               <small class="small-title">cosmetic company</small>
@@ -76,21 +76,143 @@
             <img class="img-fluid" src="/images/accueil-4-1588086461.jpg" alt="">
           </div>
         </div>
-        
       </div>  <!-- mainscreen END -->
       <div class="mainscreen-trigger"></div>
         <div class="blockqoute">
           <div class="container">
             <div class="blockqoute__text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio est aliquid voluptatem eos quas
-              quos nam repudiandae laboriosam iure omnis veritatis officiis, praesentium error accusamus incidunt modi
-              animi rem architecto.Voluptates quia adipisci nisi dignissimos, iure cum sequi aliquam? Saepe expedita
-              quam et odio non quas ducimus soluta dignissimos, minus nisi illo quaerat, magni quis impedit enim
-              blanditiis fugit eveniet.
+              Sophie. Graphiste et Directrice Artistique web et print depuis neuf ans.
             </div>
             <a href="" class="button js-link">
               products
             </a>
+          </div>
+        </div>
+        <div class="projects-grid js-projects-grid">
+          <div class="container projects-grid__container">
+            <div class="row projects-grid__row-1">
+              <div class="col-md-6 projects-grid__col">
+                <div class="projects-grid__project project-1">
+                  <div class="projects-grid__wrapper">
+                    <a class="projects-grid__link" href="">
+                      <span class="projects-grid__img-wrapper">
+                        <span id="image-1" class="projects-grid__image-inner">
+                          <div style="background-image: url(/images/self-bg.jpg);" class="projects-grid__bg-image"></div>
+                        </span>
+                      </span>
+                      <h3 class="projects-grid__title"><span>شامبو ثوم</span></h3>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 projects-grid__col">
+                <div class="projects-grid__project project-2">
+                  <div class="projects-grid__wrapper">
+                    <a class="projects-grid__link" href="">
+                      <span class="projects-grid__img-wrapper">
+                        <span id="image-2" class="projects-grid__image-inner">
+                          <div style="background-image: url(/images/project-2.jpg);" class="projects-grid__bg-image"></div>
+                        </span>
+                      </span>
+                      <h3 class="projects-grid__title"><span>DJ Hamma</span></h3>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row projects-grid__row-2">
+              <div class="col-md-6 projects-grid__col">
+                <div class="projects-grid__project project-3">
+                  <div class="projects-grid__wrapper">
+                    <a class="projects-grid__link" href="">
+                      <span class="projects-grid__img-wrapper">
+                        <span id="image-3" class="projects-grid__image-inner">
+                          <div style="background-image: url(/images/project-3.jpg);" class="projects-grid__bg-image"></div>
+                        </span>
+                      </span>
+                      <h3 class="projects-grid__title"><span>DJ Hamma</span></h3>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 projects-grid__col">
+                <div class="projects-grid__project project-4">
+                  <div class="projects-grid__wrapper">
+                    <a class="projects-grid__link" href="">
+                      <span class="projects-grid__img-wrapper">
+                        <span id="image-4" class="projects-grid__image-inner">
+                          <div style="background-image: url(images/project-4.jpeg);" class="projects-grid__bg-image"></div>
+                        </span>
+                      </span>
+                      <h3 class="projects-grid__title"><span>DJ Hamma</span></h3>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row projects-grid__row-3">
+              <div class="col-md-6 projects-grid__col">
+                <div class="projects-grid__project project-5">
+                  <div class="projects-grid__wrapper">
+                    <a class="projects-grid__link" href="">
+                      <span class="projects-grid__img-wrapper">
+                        <span id="image-5" class="projects-grid__image-inner">
+                          <div style="background-image: url(/images/project-5.jpeg);" class="projects-grid__bg-image"></div>
+                        </span>
+                      </span>
+                      <h3 class="projects-grid__title"><span>DJ Hamma</span></h3>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 projects-grid__col">
+                <div class="projects-grid__project project-6">
+                  <div class="projects-grid__wrapper">
+                    <a class="projects-grid__link" href="">
+                      <span class="projects-grid__img-wrapper">
+                        <span id="image-6" class="projects-grid__image-inner">
+                          <div style="background-image: url(/images/project-6.jpeg);" class="projects-grid__bg-image"></div>
+                        </span>
+                      </span>
+                      <h3 class="projects-grid__title"><span>DJ Hamma</span></h3>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-30">
+            <a class="button" href="@">our Projects</a>
+          </div>
+        </div>
+        <div class="js-home-push-contact">
+          <div class="push-contact">
+            <div class="container">
+              <p class="small-title color-pink-light js-push-contact-el">Contact</p>
+              <p class="blockquote__text js-anim-activ">
+                <span class="text-outer">
+                  <span class="text-inner">
+                    Vous avez un projet
+                  </span>
+                </span>
+                <span class="text-outer">
+                  <span class="text-inner">
+                    de création print ou web ?
+                  </span>
+                </span>
+                <span class="text-outer">
+                  <span class="text-inner">
+                    Vous avez un projet
+                  </span>
+                </span>
+              </p>
+            </div>
+            <div class="mb-30">
+              <a href="/" class="button">contact@sophie-dkf.com</a>
+            </div>
+            <div class="mb-30">
+              <a href="/" class="button">+33 (0)6 67 35 26 44</a>
+            </div>
           </div>
         </div>
     </div>

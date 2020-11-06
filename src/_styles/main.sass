@@ -1,18 +1,51 @@
 // Normalize Styles
-@import node_modules/normalize.css/normalize
 @import node_modules/bootstrap/scss/bootstrap
 
 // Import Modules
 @import var
 
-// Box sizing partial styles:
-// Apply a natural box layout model to all elements
-*,
-*:before,
-*:after
-  -moz-box-sizing: border-box
-  -webkit-box-sizing: border-box
+
+// SASS RESET CSS
+
+*, *:before, *:after
   box-sizing: border-box
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  text-size-adjust: none
+
+footer, header, nav, section, main
+  display: block
+
+body
+  line-height: 1
+
+ol, ul
+    list-style: none
+
+blockquote, q
+    quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+    content: ''
+    content: none
+
+table
+    border-collapse: collapse
+    border-spacing: 0
+
+input
+    -webkit-appearance: none
+    border-radius: 0
+
+// END RESET
 
 body
   height: 100vh
@@ -139,42 +172,17 @@ header
     height: 100%
     align-items: center
 
-  .row
-    display: flex
-    flex-wrap: wrap
-    margin-right: -15px
-
   &__col-right
     padding-top: 15px
     padding-right: 3vw
   &__col-right-inner
     display: inline-block
     text-align: left
-  .mb-30
-    margin-bottom: 30px
+    .button
+      color: $link-hover !important
+      letter-spacing: 0
 
-  .buttom
-    display: inline-block
-    color: $link-hover
-    font-size: 1rem
-    text-indent: .3em
-    text-transform: uppercase
-    position: relative
-    text-decoration: none
-    font-family: sans-serif
-    transition: color .5s ease
-    &::after
-      content: ''
-      position: absolute
-      bottom: -8px
-      left: .4em
-      right: .4em
-      height: 1px
-      background-color: currentColor
-      transition: transform .5s ease-out
-    &:hover
-      &::after
-        transform: scale(1.2)
+
   .buttom:hover
     color: #ffffff
   @media (min-width: 768px)
@@ -183,11 +191,6 @@ header
       text-align: center
     .menu__row
       width: 100%
-  @media (min-width: 992px)
-    .col-lg-6
-      flex: 0 0 50%
-      max-width: 50%
-
 .main-social
   position: fixed
   bottom: 60px
@@ -299,12 +302,14 @@ header
   overflow: hidden
 .title
   display: block
+  transform: translateY(100%)
+  transition: transform 1.2s cubic-bezier(.165,.84,.44,1)
 .small-title
   display: block
   color: $main-color
-  font-size: 1.3rem
-  letter-spacing: .9em
-  text-indent: .9em
+  font-size: 0.9rem
+  letter-spacing: 0.3em
+  text-indent: 0.3em
   text-transform: uppercase
   text-align: center
   font-family: Arial, Helvetica, sans-serif
@@ -312,35 +317,41 @@ header
 .blockqoute
   margin-bottom: 180px
   text-align: center
-  color: $main-color
   &__text
     font-family: Arial, Helvetica, sans-serif
+    color: $main-color
+    font-size: 3.9vw
+    line-height: 1.4
+    max-width: 54vw
+    margin: 0 auto
+  &__text:not(:last-child)
+    margin-bottom: 60px
+
 .button
   display: inline-block
+  color: $main-color !important
   font-size: .8rem
   letter-spacing: .2em
   text-indent: .4em
   text-transform: uppercase
   position: relative
+  font-family: sans-serif
   transition: color .5s ease
-  text-decoration: none
-  font-family: Arial, Helvetica, sans-serif
-  &::before
+  &::after
     content: ''
     position: absolute
-    background: currentColor
-    left: 0
-    bottom: -3px
-    width: 100%
+    bottom: -8px
+    left: .4em
+    right: .4em
     height: 1px
+    background-color: currentColor
     transition: transform .5s ease-out
   &:hover
-    &::before
+    &::after
       transform: scale(1.2)
 
 
-// MAIN COL IMGS
-
+// MAIN COL IMG
 
 .mainscreen-col-left-img
  display: inline-block
@@ -370,6 +381,201 @@ header
     width: 100%
 
 
+
+// SECTIONE GRID
+.projects-grid
+  min-height: 100vh
+  width: 100%
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  margin-bottom: 180px
+  padding-top: 450px
+  padding-bottom: 20px
+
+  &__project
+    position: relative
+    display: inline-block
+  &__project.project-1
+    display: block
+    .projects-grid__title
+      top: 30%
+      left: auto
+      right: 0
+      transform: translateX(40%)
+      text-align: left
+
+  &__project.project-2
+    transform: translateY(70%)
+    .projects-grid__title
+      top: 75%
+  &__project.project-3
+    transform: translate(20%, 70%)
+    .projects-grid__title
+      top: 65%
+      left: auto
+      right: 0
+      transform: translateX(40%)
+      text-align: left
+  &__project.project-4
+    transform: translateX(-20%)
+    .projects-grid__title
+      top: 40%
+  &__project.project-5
+    display: block
+    text-align: right
+    transform: translateX(40%)
+    .projects-grid__title
+      left: auto
+      right: 0
+      transform: translateX(60%)
+      text-align: left
+  &__project.project-6
+    display: block
+    text-align: right
+    transform: translate(20%,85%)
+    .projects-grid__title
+      left: auto
+      right: 50%
+      transform: translate(10%, -50%)
+      
+  &__link
+    display: inline-block
+  &__img-wrapper
+    display: inline-block
+    width: 380px
+    height: 100vh
+    max-height: 520px
+    overflow: hidden
+    position: relative
+  &__image-inner
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+  &__bg-image
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    height: 110%
+    width: auto
+    background-size: cover
+    background-position: 50%
+
+  &__title
+    color: $main-color
+    font-family: Arial, Helvetica, sans-serif
+    font-size: 3.9vw
+    text-align: right
+    max-width: 380px
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translate(-40%, -50%)
+    z-index: 1
+    opacity: 0
+    transition: opacity .6s,transform .8s cubic-bezier(.25,.05,.1,.94)
+    span
+      display: inline
+      border-bottom: 1px solid
+  
+
+
+
+
+.projects-grid__row-1 .projects-grid__col:first-child .projects-grid__img-wrapper, .projects-grid__row-2 .projects-grid__col:last-child .projects-grid__img-wrapper, .projects-grid__row-3 .projects-grid__col:first-child .projects-grid__img-wrapper
+  width: 520px
+  max-height: 640px
+
+
+.projects-grid__project.project-1 .projects-grid__link:hover .projects-grid__title
+  transform: translateX(50%)
+  opacity: 1
+
+@media ( min-width: 768px )
+  .projects-grid__project.project-2 .projects-grid__link:hover .projects-grid__title
+    transform: translate(-50%, -50%)
+    opacity: 1
+  .projects-grid__project.project-3 .projects-grid__link:hover .projects-grid__title
+    transform: translateX(50%)
+    opacity: 1
+  .projects-grid__project.project-6 .projects-grid__link:hover .projects-grid__title
+    transform: translateY(-50%)
+  .projects-grid__project.project-5 .projects-grid__link:hover .projects-grid__title
+    transform: translateX(70%)
+    opacity: 1
+  .projects-grid__link:hover .projects-grid__title
+    transform: translate(-50%, -50%)
+    opacity: 1
+
+// PROJECTS NAMES
+
+
+@media (max-width: 1662px)
+  .projects-grid
+    padding-top: 280px
+    &__container
+      margin-bottom: 150px
+@media (max-width:1500px)
+  .projects-grid__project.project-3
+      transform: translateY(70%)
+  .projects-grid__project.project-4
+      transform: translateX(-10%)
+  .projects-grid__project.project-5
+      transform: translateX(20%)
+  .projects-grid__project.project-6
+    transform: translateY(-85%)
+
+@media  ( min-width: 768px)
+  .projects-grid__row-1:not(:last-child)
+    margin-bottom: 480px
+
+  .projects-grid__row-2
+    margin-bottom: 680px
+
+
+
+
+
+.push-contact
+  padding-top: 90px
+  padding-bottom: 90px
+  color: $sub-color
+  text-align: center
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  .small-title
+    margin-bottom: 40px
+
+.blockquote__text:not(:last-child)
+  margin-bottom: 60px
+
+
+.blockquote__text
+  color: $main-color
+  font-size: 3.9vw
+  font-family: Arial, Helvetica, sans-serif
+  line-height: 1.4
+  max-width: 54vw
+  margin: 0 auto
+  &:not(last-child)
+    margin-bottom: 60px
+  .text-inner
+    display: block
+    
+
+
+
+
+  
 
 
 //OVERLAY DIV main-overlay

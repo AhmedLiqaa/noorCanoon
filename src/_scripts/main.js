@@ -7,6 +7,7 @@ import 'core-js';
 import 'regenerator-runtime/runtime';
 import $ from 'jquery';
 import Scrollbar from 'smooth-scrollbar';
+import { TimelineMax } from 'gsap';
 
 
 (function (_) {
@@ -98,7 +99,6 @@ import Scrollbar from 'smooth-scrollbar';
     // END SIDE MENU ANIMATION JS 
 
 
-
     btnSocial.on('click', function () {
       _(this).toggleClass('is-open');
     })
@@ -107,6 +107,45 @@ import Scrollbar from 'smooth-scrollbar';
     Scrollbar.init(document.querySelector('.js-scroll-container'), {
       renderByPixels: !0
     });
+
+    const body = _('body')
+    console.log(body)
+
+  window.addEventListener('load', function(){
+    body.addClass('is-loaded')
+  })
+
+    
+
+  // function gridParallaxProjects(e) {
+  //   const controller = new ScrollMagic.Controller({
+  //     rrefreshInterval: 1
+  //   })
+  //   var t = void 0 === t ? e : _(e).attr('id');
+  //   const projectsGridImageScrolltl = new TimelineMax;
+
+  //   projectsGridImageScrolltl.fromTo(e,1, {
+  //     y: -230,
+  //     ease: 'power3.out'
+  //    }, {
+  //     y: 130,
+  //     ease: 'power3.out'
+  //   }, 0)
+  //   const projectScene = new ScrollMagic.Scene({
+  //     triggrtElement: t,
+  //     triggreHook: 1,
+  //     duration: 4 * _(window).height()
+      
+  //   })
+
+  //   .setTween(projectsGridImageScrolltl)
+  //   .addTo(controller)
+  //   projectScene.addIndicators();
+  // }
+
+  // _('.projects-grid__image-inner').length > 0 && _('.projects-grid__image-inner').each(function(){
+  //   gridParallaxProjects(this);
+  // })
 
   });
 })($);
