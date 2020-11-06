@@ -4,7 +4,6 @@
 // Import Modules
 @import var
 
-
 // SASS RESET CSS
 
 *, *:before, *:after
@@ -28,22 +27,22 @@ body
   line-height: 1
 
 ol, ul
-    list-style: none
+  list-style: none
 
 blockquote, q
-    quotes: none
+  quotes: none
 
 blockquote:before, blockquote:after, q:before, q:after
-    content: ''
-    content: none
+  content: ''
+  content: none
 
 table
-    border-collapse: collapse
-    border-spacing: 0
+  border-collapse: collapse
+  border-spacing: 0
 
 input
-    -webkit-appearance: none
-    border-radius: 0
+  -webkit-appearance: none
+  border-radius: 0
 
 // END RESET
 
@@ -54,6 +53,34 @@ body
 //HEADER SECTION
 
 header
+
+  .scroll-progress
+    position: fixed
+    top: 50%
+    left: 85px
+    transform: translateY(calc(-50% + 25px))
+    z-index: 10
+    &__bar
+      height: 230px
+      width: 1px
+      background-color: rgba(221, 84, 91, .2)
+      position: relative
+      &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 50px
+        transform: translateY(-100%)
+        background-color: $main-color
+    &__fill
+      position: absolute
+      top: 0
+      width: 100%
+      background-color: $main-color
+      height: 0
+      transition: height .5s cubic-bezier(.25,.05,.1,.94)
   .home
     > div
       width: 50px
@@ -171,7 +198,6 @@ header
     flex-direction: row
     height: 100%
     align-items: center
-
   &__col-right
     padding-top: 15px
     padding-right: 3vw
@@ -180,8 +206,9 @@ header
     text-align: left
     .button
       color: $link-hover !important
-      letter-spacing: 0
-
+      letter-spacing: 2px
+      &:hover
+        color: #fff !important
 
   .buttom:hover
     color: #ffffff
@@ -262,6 +289,21 @@ header
   flex-wrap: wrap
   flex-direction: row
   min-height: 100vh
+.mainsscreen-col-img
+  position: relative
+  &::after
+    content: ""
+    background-color: #ffffff
+    position: absolute
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    transform-origin: bottom
+    transition: transform 1s cubic-bezier(.25,.05,.1,.94)
+
+.is-loaded .mainsscreen-col-img:after
+  transform: scaleY(0)
 
 .main-screen__col-left
   width: 100%
@@ -350,13 +392,12 @@ header
     &::after
       transform: scale(1.2)
 
-
 // MAIN COL IMG
 
 .mainscreen-col-left-img
- display: inline-block
- position: relative
- z-index: 1
+  display: inline-block
+  position: relative
+  z-index: 1
 
 @media (min-width: 992px)
   .mainscreen-col-left-img
@@ -380,8 +421,6 @@ header
   img
     width: 100%
 
-
-
 // SECTIONE GRID
 .projects-grid
   min-height: 100vh
@@ -394,12 +433,14 @@ header
   margin-bottom: 180px
   padding-top: 450px
   padding-bottom: 20px
+  position: relative
 
   &__project
     position: relative
     display: inline-block
   &__project.project-1
     display: block
+    text-align: right
     .projects-grid__title
       top: 30%
       left: auto
@@ -435,12 +476,12 @@ header
   &__project.project-6
     display: block
     text-align: right
-    transform: translate(20%,85%)
+    transform: translate(20%,-85%)
     .projects-grid__title
       left: auto
       right: 50%
       transform: translate(10%, -50%)
-      
+
   &__link
     display: inline-block
   &__img-wrapper
@@ -483,15 +524,14 @@ header
     span
       display: inline
       border-bottom: 1px solid
-  
-
-
-
+.projects-grid__container
+  margin-bottom: 200px
 
 .projects-grid__row-1 .projects-grid__col:first-child .projects-grid__img-wrapper, .projects-grid__row-2 .projects-grid__col:last-child .projects-grid__img-wrapper, .projects-grid__row-3 .projects-grid__col:first-child .projects-grid__img-wrapper
   width: 520px
   max-height: 640px
-
+.projects-grid__row-1 .projects-grid__col:first-child, .projects-grid__row-2 .projects-grid__col:last-child, .projects-grid__row-3 .projects-grid__col:first-child
+  z-index: 1
 
 .projects-grid__project.project-1 .projects-grid__link:hover .projects-grid__title
   transform: translateX(50%)
@@ -513,8 +553,13 @@ header
     transform: translate(-50%, -50%)
     opacity: 1
 
-// PROJECTS NAMES
+@media (min-width: 1920px)
+  .projects-grid__project.project-3
+    transform: translate(-60%,70%)
+  .projects-grid__project.project-4
+    transform: translate(-40%)
 
+// PROJECTS NAMES
 
 @media (max-width: 1662px)
   .projects-grid
@@ -523,24 +568,28 @@ header
       margin-bottom: 150px
 @media (max-width:1500px)
   .projects-grid__project.project-3
-      transform: translateY(70%)
+    transform: translateY(70%)
   .projects-grid__project.project-4
-      transform: translateX(-10%)
+    transform: translateX(-10%)
   .projects-grid__project.project-5
-      transform: translateX(20%)
+    transform: translateX(20%)
   .projects-grid__project.project-6
     transform: translateY(-85%)
 
 @media  ( min-width: 768px)
   .projects-grid__row-1:not(:last-child)
     margin-bottom: 480px
+@media (min-width: 1680px)
+  .projects-grid__title
+    font-size: 4rem
+  .blockqoute__text
+    font-size: 4rem
 
   .projects-grid__row-2
     margin-bottom: 680px
-
-
-
-
+.blockqoute__text
+  &:not(last-child)
+    margin-bottom: 60px
 
 .push-contact
   padding-top: 90px
@@ -558,7 +607,6 @@ header
 .blockquote__text:not(:last-child)
   margin-bottom: 60px
 
-
 .blockquote__text
   color: $main-color
   font-size: 3.9vw
@@ -566,17 +614,12 @@ header
   line-height: 1.4
   max-width: 54vw
   margin: 0 auto
-  &:not(last-child)
+  &:not(:last-child)
     margin-bottom: 60px
   .text-inner
     display: block
-    
-
-
-
-
-  
-
+.text-outer
+  display: block
 
 //OVERLAY DIV main-overlay
 
