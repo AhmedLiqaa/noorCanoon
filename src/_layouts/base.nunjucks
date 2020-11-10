@@ -1,39 +1,103 @@
 {# Custom Configuration #}
 {% block config %}
-  {# Setup site's base URL to match the "baseUrl" key within `package.json` #}
-  {# Otherwise default to relative pathing #}
-  {% set baseUrl = config.baseUrl or '../' %}
+{# Setup site's base URL to match the "baseUrl" key within `package.json` #}
+{# Otherwise default to relative pathing #}
+{% set baseUrl = config.baseUrl or '../' %}
 {% endblock %}
 
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 
-  <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>Sample</title>
-    <meta name="description" content="A new Yeogurt application"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="{{baseUrl}}styles/main.css"/>
-    {% block stylesheets %}{% endblock %}
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Sample</title>
+  <meta name="description" content="A new Yeogurt application" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="{{baseUrl}}styles/main.css" />
+  {% block stylesheets %}{% endblock %}
 
-  </head>
-  <body>
-    <!--[if lt IE 11]>
+</head>
+
+<body>
+  <!--[if lt IE 11]>
     <p class="browsehappy">
       You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
     </p>
     <![endif]-->
+  <header>
+    <a class="home" href="#">
+      <div>
+        <img src="/images/logo_color.svg" alt="">
+      </div>
+    </a>
+    <button class="nav toggle-menu">
+      <span class="nav__up"></span>
+      <span class="nav__down"></span>
+    </button>
+    <div class="scroll-progress">
+      <div class="scroll-progress__bar">
+        <div class="scroll-progress__fill"></div>
+      </div>
+    </div>
+    <div class="menu">
+      <div class="container-fluid menu__container">
+        <div class="menu__row row">
+          <div class="col-lg-6 menu__col-left">
+            <ul class="navigation">
+              <li class="navigation__item js-menu-item js-hover-links"><a class="navigation__link"
+                  href="products/">المنتجات</a>
+              </li>
+              <li class="navigation__item js-menu-item js-hover-links"><a class="navigation__link" href="#">عن
+                  الشركة</a>
+              </li>
+              <li class="navigation__item js-menu-item js-hover-links"><a class="navigation__link" href="#">اقكار
+                  جديدة</a></li>
+              <li class="navigation__item js-menu-item js-hover-links"><a class="navigation__link" href="#">الاتصال
+                  بنا</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 menu__col-right">
+            <div class="menu__col-right-inner">
+              <div class="mb-30">
+                <a class="button js-infos-item" href="">noorcanoon@gmail.com</a>
+              </div>
+              <div class="mb-30">
+                <a class="button js-infos-item" href="">+33 (0)6 67 35 26 44</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-social">
+      <button class="main-social__button">
+        <span class="sr-only">
+          +
+        </span>
+      </button>
+    </div>
+  </header>
 
-    {% block content %}{% endblock %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-    <script src="{{baseUrl}}scripts/main.js"></script>
-    {% block scripts %}{% endblock %}
-  </body>
+  <div class="main-wrapper">
+    <main class="js-scroll-container">
+
+      {% block content %}{% endblock %}
+
+    </main>
+  </div>
+  <div class="main-overlay js-main-overlay"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+    integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script src="{{baseUrl}}scripts/main.js"></script>
+  {% block scripts %}{% endblock %}
+</body>
+
 </html>

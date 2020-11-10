@@ -3,229 +3,175 @@
 {% import "_modules/link/link.nunjucks" as link %}
 
 {% block content %}
-<header>
-  <a class="home" href="#">
-    <div>
-      <img src="/images/logo_color.svg" alt="">
-    </div>
-  </a>
-  <button class="nav toggle-menu">
-    <span class="nav__up"></span>
-    <span class="nav__down"></span>
-  </button>
-  <div class="scroll-progress">
-    <div class="scroll-progress__bar">
-      <div class="scroll-progress__fill"></div>
-    </div>
-  </div>
-  <div class="menu">
-    <div class="container-fluid menu__container">
-      <div class="menu__row row">
-        <div class="col-lg-6 menu__col-left">
-          <ul class="navigation">
-            <li class="navigation__item js-menu-item js-hover-links"><a class="navigation__link" href="#">المنتجات</a>
-            </li>
-            <li class="navigation__item js-menu-item js-hover-links"><a class="navigation__link" href="#">عن الشركة</a>
-            </li>
-            <li class="navigation__item js-menu-item js-hover-links"><a class="navigation__link" href="#">اقكار
-                جديدة</a></li>
-            <li class="navigation__item js-menu-item js-hover-links"><a class="navigation__link" href="#">الاتصال
-                بنا</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-6 menu__col-right">
-          <div class="menu__col-right-inner">
-            <div class="mb-30">
-              <a class="button js-infos-item" href="">noorcanoon@gmail.com</a>
-            </div>
-            <div class="mb-30">
-              <a class="button js-infos-item" href="">+33 (0)6 67 35 26 44</a>
-            </div>
-          </div>
+
+<div class="home">
+  <div class="main-screen">
+    <div class="main-screen-row">
+      <div class="main-screen__col-left">
+        <h1 class="main-title-box js-main-title">
+          <span class="main-title">
+            <span class="title-box-wrapper">
+              <span class="title">Noor</spanc>
+              </span>
+            </span>
+            <span class="title-box-wrapper">
+              <span class="title">Canoon</span>
+            </span>
+          </span>
+          <small class="small-title">cosmetic company</small>
+        </h1>
+        <div class="mainscreen-col-left-img mainsscreen-col-img js-mainscreen-col-img">
+          <img class="img-fluid" src="/images/accueil-2-1588086932.jpg" alt="">
         </div>
       </div>
+      <div class="main-screen__col-right mainsscreen-col-img">
+        <img class="img-fluid" src="/images/accueil-4-1588086461.jpg" alt="">
+      </div>
+    </div>
+  </div> <!-- mainscreen END -->
+  <div class="mainscreen-trigger"></div>
+  <div class="blockqoute">
+    <div class="container">
+      <div class="blockqoute__text">
+        Sophie. Graphiste et Directrice Artistique web et print depuis neuf ans.
+      </div>
+      <a href="" class="button js-link">
+        products
+      </a>
     </div>
   </div>
-  <div class="main-social">
-    <button class="main-social__button">
-      <span class="sr-only">
-        +
-      </span>
-    </button>
-  </div>
-</header>
-<div class="main-wrapper">
-  <main class="js-scroll-container">
-    <div class="home">
-      <div class="main-screen">
-        <div class="main-screen-row">
-          <div class="main-screen__col-left">
-            <h1 class="main-title-box js-main-title">
-              <span class="main-title">
-                <span class="title-box-wrapper">
-                  <span class="title">Noor</spanc>
+  <div class="projects-grid js-projects-grid">
+    <div class="container projects-grid__container">
+      <div class="row projects-grid__row-1">
+        <div class="col-md-6 projects-grid__col">
+          <div class="projects-grid__project project-1">
+            <div class="projects-grid__wrapper">
+              <a class="projects-grid__link" href="">
+                <span class="projects-grid__img-wrapper">
+                  <span id="image-1" class="projects-grid__image-inner">
+                    <div style="background-image: url(/images/self-bg.jpg);" class="projects-grid__bg-image"></div>
                   </span>
                 </span>
-                <span class="title-box-wrapper">
-                  <span class="title">Canoon</span>
+                <h3 class="projects-grid__title"><span>شامبو ثوم</span></h3>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 projects-grid__col">
+          <div class="projects-grid__project project-2">
+            <div class="projects-grid__wrapper">
+              <a class="projects-grid__link" href="">
+                <span class="projects-grid__img-wrapper">
+                  <span id="image-2" class="projects-grid__image-inner">
+                    <div style="background-image: url(/images/project-2.jpg);" class="projects-grid__bg-image">
+                    </div>
+                  </span>
                 </span>
-              </span>
-              <small class="small-title">cosmetic company</small>
-            </h1>
-            <div class="mainscreen-col-left-img mainsscreen-col-img js-mainscreen-col-img">
-              <img class="img-fluid" src="/images/accueil-2-1588086932.jpg" alt="">
+                <h3 class="projects-grid__title"><span>DJ Hamma</span></h3>
+              </a>
             </div>
           </div>
-          <div class="main-screen__col-right mainsscreen-col-img">
-            <img class="img-fluid" src="/images/accueil-4-1588086461.jpg" alt="">
-          </div>
-        </div>
-      </div> <!-- mainscreen END -->
-      <div class="mainscreen-trigger"></div>
-      <div class="blockqoute">
-        <div class="container">
-          <div class="blockqoute__text">
-            Sophie. Graphiste et Directrice Artistique web et print depuis neuf ans.
-          </div>
-          <a href="" class="button js-link">
-            products
-          </a>
-        </div>
-      </div>
-      <div class="projects-grid js-projects-grid">
-        <div class="container projects-grid__container">
-          <div class="row projects-grid__row-1">
-            <div class="col-md-6 projects-grid__col">
-              <div class="projects-grid__project project-1">
-                <div class="projects-grid__wrapper">
-                  <a class="projects-grid__link" href="">
-                    <span class="projects-grid__img-wrapper">
-                      <span id="image-1" class="projects-grid__image-inner">
-                        <div style="background-image: url(/images/self-bg.jpg);" class="projects-grid__bg-image"></div>
-                      </span>
-                    </span>
-                    <h3 class="projects-grid__title"><span>شامبو ثوم</span></h3>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 projects-grid__col">
-              <div class="projects-grid__project project-2">
-                <div class="projects-grid__wrapper">
-                  <a class="projects-grid__link" href="">
-                    <span class="projects-grid__img-wrapper">
-                      <span id="image-2" class="projects-grid__image-inner">
-                        <div style="background-image: url(/images/project-2.jpg);" class="projects-grid__bg-image">
-                        </div>
-                      </span>
-                    </span>
-                    <h3 class="projects-grid__title"><span>DJ Hamma</span></h3>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row projects-grid__row-2">
-            <div class="col-md-6 projects-grid__col">
-              <div class="projects-grid__project project-3">
-                <div class="projects-grid__wrapper">
-                  <a class="projects-grid__link" href="">
-                    <span class="projects-grid__img-wrapper">
-                      <span id="image-3" class="projects-grid__image-inner">
-                        <div style="background-image: url(/images/project-3.jpg);" class="projects-grid__bg-image">
-                        </div>
-                      </span>
-                    </span>
-                    <h3 class="projects-grid__title"><span>DJ Hamma</span></h3>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 projects-grid__col">
-              <div class="projects-grid__project project-4">
-                <div class="projects-grid__wrapper">
-                  <a class="projects-grid__link" href="">
-                    <span class="projects-grid__img-wrapper">
-                      <span id="image-4" class="projects-grid__image-inner">
-                        <div style="background-image: url(images/project-4.jpeg);" class="projects-grid__bg-image">
-                        </div>
-                      </span>
-                    </span>
-                    <h3 class="projects-grid__title"><span>DJ Hamma</span></h3>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row projects-grid__row-3">
-            <div class="col-md-6 projects-grid__col">
-              <div class="projects-grid__project project-5">
-                <div class="projects-grid__wrapper">
-                  <a class="projects-grid__link" href="">
-                    <span class="projects-grid__img-wrapper">
-                      <span id="image-5" class="projects-grid__image-inner">
-                        <div style="background-image: url(/images/project-5.jpeg);" class="projects-grid__bg-image">
-                        </div>
-                      </span>
-                    </span>
-                    <h3 class="projects-grid__title"><span>DJ Hamma</span></h3>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 projects-grid__col">
-              <div class="projects-grid__project project-6">
-                <div class="projects-grid__wrapper">
-                  <a class="projects-grid__link" href="">
-                    <span class="projects-grid__img-wrapper">
-                      <span id="image-6" class="projects-grid__image-inner">
-                        <div style="background-image: url(/images/project-6.jpeg);" class="projects-grid__bg-image">
-                        </div>
-                      </span>
-                    </span>
-                    <h3 class="projects-grid__title"><span>DJ Hamma</span></h3>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center mt-30">
-          <a class="button" href="@">our Projects</a>
         </div>
       </div>
-      <div class="js-home-push-contact">
-        <div class="push-contact">
-          <div class="container">
-            <p class="small-title color-pink-light js-push-contact-el">Contact</p>
-            <p class="blockqoute__text js-anim-activ">
-              <span class="text-outer">
-                <span class="text-inner">
-                  Vous avez un projet
+      <div class="row projects-grid__row-2">
+        <div class="col-md-6 projects-grid__col">
+          <div class="projects-grid__project project-3">
+            <div class="projects-grid__wrapper">
+              <a class="projects-grid__link" href="">
+                <span class="projects-grid__img-wrapper">
+                  <span id="image-3" class="projects-grid__image-inner">
+                    <div style="background-image: url(/images/project-3.jpg);" class="projects-grid__bg-image">
+                    </div>
+                  </span>
                 </span>
-              </span>
-              <span class="text-outer">
-                <span class="text-inner">
-                  de création print ou web ?
-                </span>
-              </span>
-              <span class="text-outer">
-                <span class="text-inner">
-                  Vous avez un projet
-                </span>
-              </span>
-            </p>
+                <h3 class="projects-grid__title"><span>DJ Hamma</span></h3>
+              </a>
+            </div>
           </div>
-          <div class="mb-30">
-            <a href="/" class="button">contact@sophie-dkf.com</a>
+        </div>
+        <div class="col-md-6 projects-grid__col">
+          <div class="projects-grid__project project-4">
+            <div class="projects-grid__wrapper">
+              <a class="projects-grid__link" href="">
+                <span class="projects-grid__img-wrapper">
+                  <span id="image-4" class="projects-grid__image-inner">
+                    <div style="background-image: url(images/project-4.jpeg);" class="projects-grid__bg-image">
+                    </div>
+                  </span>
+                </span>
+                <h3 class="projects-grid__title"><span>DJ Hamma</span></h3>
+              </a>
+            </div>
           </div>
-          <div class="mb-30">
-            <a href="/" class="button">+33 (0)6 67 35 26 44</a>
+        </div>
+      </div>
+      <div class="row projects-grid__row-3">
+        <div class="col-md-6 projects-grid__col">
+          <div class="projects-grid__project project-5">
+            <div class="projects-grid__wrapper">
+              <a class="projects-grid__link" href="">
+                <span class="projects-grid__img-wrapper">
+                  <span id="image-5" class="projects-grid__image-inner">
+                    <div style="background-image: url(/images/project-5.jpeg);" class="projects-grid__bg-image">
+                    </div>
+                  </span>
+                </span>
+                <h3 class="projects-grid__title"><span>DJ Hamma</span></h3>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 projects-grid__col">
+          <div class="projects-grid__project project-6">
+            <div class="projects-grid__wrapper">
+              <a class="projects-grid__link" href="">
+                <span class="projects-grid__img-wrapper">
+                  <span id="image-6" class="projects-grid__image-inner">
+                    <div style="background-image: url(/images/project-6.jpeg);" class="projects-grid__bg-image">
+                    </div>
+                  </span>
+                </span>
+                <h3 class="projects-grid__title"><span>DJ Hamma</span></h3>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </main>
+    <div class="text-center mt-30">
+      <a class="button" href="@">our Projects</a>
+    </div>
+  </div>
+  <div class="js-home-push-contact">
+    <div class="push-contact">
+      <div class="container">
+        <p class="small-title color-pink-light js-push-contact-el">Contact</p>
+        <p class="blockqoute__text js-anim-activ">
+          <span class="text-outer">
+            <span class="text-inner">
+              Vous avez un projet
+            </span>
+          </span>
+          <span class="text-outer">
+            <span class="text-inner">
+              de création print ou web ?
+            </span>
+          </span>
+          <span class="text-outer">
+            <span class="text-inner">
+              Vous avez un projet
+            </span>
+          </span>
+        </p>
+      </div>
+      <div class="mb-30">
+        <a href="/" class="button">contact@sophie-dkf.com</a>
+      </div>
+      <div class="mb-30">
+        <a href="/" class="button">+33 (0)6 67 35 26 44</a>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="main-overlay js-main-overlay"></div>
+
 {% endblock %}

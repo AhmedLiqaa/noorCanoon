@@ -5,6 +5,7 @@
 
 import 'core-js';
 import 'regenerator-runtime/runtime';
+import Swiper from 'swiper/bundle';
 import $ from 'jquery';
 import Scrollbar from 'smooth-scrollbar';
 
@@ -120,7 +121,8 @@ const animationController = new ScrollMagic.Controller({
 console.log(animationController);
 
 const scrollBar = Scrollbar.init(document.querySelector('.js-scroll-container'), {
-  renderByPixels: !0
+  renderByPixels: !0,
+  damping: .07
 });
 
 
@@ -287,10 +289,35 @@ bannerImageScroll();
 
 
 
-function changeColor(){
+function changeColor() {
   const scene = new ScrollMagic.Scene({
     triggerElement: '.push-contact',
     triggerHook: 0.5
-  }).setClassToggle('body', "background-pink-white").addTo(animationController)
+  }).setClassToggle("body", "background-pink-white").addTo(animationController)
 }
 changeColor();
+
+
+// PRODUCTS SLIDER SWIPER
+
+
+
+
+function sliderProducts() {
+
+
+  var productSwiper = new Swiper('.swiper-container', {
+    slidesPerView: "auto",
+    spaceBetween: 40,
+    centeredSlides: !1,
+    speed: 800,
+    freeMode: !0,
+    watchSlidesProgress: !0,
+    mousewheel: !0,
+    slidesOffsetBefore: 40,
+    slidesOffsetAfter: 40
+  })
+
+}
+
+sliderProducts();

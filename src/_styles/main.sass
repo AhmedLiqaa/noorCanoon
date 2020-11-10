@@ -594,7 +594,6 @@ header
 @media (min-width: 768px)
   .projects-grid__row-2
     margin-bottom: 680px
-  
 
 .push-contact
   padding-top: 90px
@@ -641,3 +640,32 @@ header
   display: none
 .main-overlay.is-active
   display: block
+
+//PRODUCTS PAGE SLIDER
+
+.project-thumbnail
+  position: relative
+  width: 380px
+  &__link
+    display: inline-block
+    cursor: pointer
+.swiper-wrapper
+  display: flex
+  position: relative
+  width: 100%
+  height: 100%
+  z-index: 1
+  transition-property: transform
+  box-sizing: content-box
+
+.is-loaded .projects-carousel
+  &__slide
+    transform: translateX(0)
+    opacity: 1
+
+.projects-carousel
+  &__slide
+    width: auto
+    transform: translateX(200%)
+    opacity: 0
+    transition: transform .8s cubic-bezier(.25,.05,.1,.94),opacity .9s cubic-bezier(.2,.6,.35,1)
