@@ -1,4 +1,5 @@
 {% extends '_layouts/base.nunjucks' %}
+{% set bodyClass = 'project-page'%}
 
 {% block config %}
 {# Correct base url pathing for this page #}
@@ -10,42 +11,28 @@
 
 <div class="projects">
   <div class="projects-wrapper">
-    <div class="swiper-container js-slide-container">
+  <div class="text-center">
+    <h1 class="main-title-products">
+      <span>
+        Products
+      </span>
+    </h1>
+  </div>
+    <div class="swiper-container projects-carousel js-slide-container">
       <div class="swiper-wrapper">
-
         <div class="swiper-slide projects-carousel__slide">
           <div class="project-thumbnail">
             <a href="" class="project-thumbnail__link">
               <div class="project-thumbnail__img-wrapper">
                 <img src="/images/project-2.jpg" alt="" class="img-fluid">
               </div>
-            </a>
-          </div>
-        </div> <!-- SLIDE END -->
-        <div class="swiper-slide projects-carousel__slide">
-          <div class="project-thumbnail">
-            <a href="" class="project-thumbnail__link">
-              <div class="project-thumbnail__img-wrapper">
-                <img src="/images/project-2.jpg" alt="" class="img-fluid">
-              </div>
-            </a>
-          </div>
-        </div> <!-- SLIDE END -->
-        <div class="swiper-slide projects-carousel__slide">
-          <div class="project-thumbnail">
-            <a href="" class="project-thumbnail__link">
-              <div class="project-thumbnail__img-wrapper">
-                <img class="img-fluid" src="/images/project-2.jpg" alt="">
-              </div>
-            </a>
-          </div>
-        </div> <!-- SLIDE END -->
-
-        <div class="swiper-slide projects-carousel__slide">
-          <div class="project-thumbnail">
-            <a href="" class="project-thumbnail__link">
-              <div class="project-thumbnail__img-wrapper">
-                <img src="/images/project-2.jpg" alt="" class="img-fluid">
+              <div class="project-thumbnail__content">
+                <div class="project-thumbnail__content-inner">
+                  <h2 class="project-thumbnail__title">
+                    <span>Champagne Brocard</span>
+                  </h2>
+                  <p class="project-thumbnail__category">BROCHURE</p>
+                </div>
               </div>
             </a>
           </div>
@@ -56,24 +43,13 @@
               <div class="project-thumbnail__img-wrapper">
                 <img src="/images/project-2.jpg" alt="" class="img-fluid">
               </div>
-            </a>
-          </div>
-        </div> <!-- SLIDE END -->
-        <div class="swiper-slide projects-carousel__slide">
-          <div class="project-thumbnail">
-            <a href="" class="project-thumbnail__link">
-              <div class="project-thumbnail__img-wrapper">
-                <img class="img-fluid" src="/images/project-2.jpg" alt="">
-              </div>
-            </a>
-          </div>
-        </div> <!-- SLIDE END -->
-
-        <div class="swiper-slide projects-carousel__slide">
-          <div class="project-thumbnail">
-            <a href="" class="project-thumbnail__link">
-              <div class="project-thumbnail__img-wrapper">
-                <img src="/images/project-2.jpg" alt="" class="img-fluid">
+              <div class="project-thumbnail__content">
+                <div class="project-thumbnail__content-inner">
+                  <h2 class="project-thumbnail__title">
+                    <span>Champagne Brocard</span>
+                  </h2>
+                  <p class="project-thumbnail__category">BROCHURE</p>
+                </div>
               </div>
             </a>
           </div>
@@ -84,14 +60,13 @@
               <div class="project-thumbnail__img-wrapper">
                 <img src="/images/project-2.jpg" alt="" class="img-fluid">
               </div>
-            </a>
-          </div>
-        </div> <!-- SLIDE END -->
-        <div class="swiper-slide projects-carousel__slide">
-          <div class="project-thumbnail">
-            <a href="" class="project-thumbnail__link">
-              <div class="project-thumbnail__img-wrapper">
-                <img class="img-fluid" src="/images/project-2.jpg" alt="">
+              <div class="project-thumbnail__content">
+                <div class="project-thumbnail__content-inner">
+                  <h2 class="project-thumbnail__title">
+                    <span>Champagne Brocard</span>
+                  </h2>
+                  <p class="project-thumbnail__category">BROCHURE</p>
+                </div>
               </div>
             </a>
           </div>
@@ -100,12 +75,121 @@
           <div class="project-thumbnail">
             <a href="" class="project-thumbnail__link">
               <div class="project-thumbnail__img-wrapper">
-                <img class="img-fluid" src="/images/project-2.jpg" alt="">
+                <img src="/images/project-2.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="project-thumbnail__content">
+                <div class="project-thumbnail__content-inner">
+                  <h2 class="project-thumbnail__title">
+                    <span>Champagne Brocard</span>
+                  </h2>
+                  <p class="project-thumbnail__category">BROCHURE</p>
+                </div>
               </div>
             </a>
           </div>
         </div> <!-- SLIDE END -->
-
+        <div class="swiper-slide projects-carousel__slide">
+          <div class="project-thumbnail">
+            <a href="" class="project-thumbnail__link">
+              <div class="project-thumbnail__img-wrapper">
+                <img src="/images/project-2.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="project-thumbnail__content">
+                <div class="project-thumbnail__content-inner">
+                  <h2 class="project-thumbnail__title">
+                    <span>Champagne Brocard</span>
+                  </h2>
+                  <p class="project-thumbnail__category">BROCHURE</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div> <!-- SLIDE END -->
+        <div class="swiper-slide projects-carousel__slide">
+          <div class="project-thumbnail">
+            <a href="" class="project-thumbnail__link">
+              <div class="project-thumbnail__img-wrapper">
+                <img src="/images/project-2.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="project-thumbnail__content">
+                <div class="project-thumbnail__content-inner">
+                  <h2 class="project-thumbnail__title">
+                    <span>Champagne Brocard</span>
+                  </h2>
+                  <p class="project-thumbnail__category">BROCHURE</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div> <!-- SLIDE END -->
+        <div class="swiper-slide projects-carousel__slide">
+          <div class="project-thumbnail">
+            <a href="" class="project-thumbnail__link">
+              <div class="project-thumbnail__img-wrapper">
+                <img src="/images/project-2.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="project-thumbnail__content">
+                <div class="project-thumbnail__content-inner">
+                  <h2 class="project-thumbnail__title">
+                    <span>Champagne Brocard</span>
+                  </h2>
+                  <p class="project-thumbnail__category">BROCHURE</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div> <!-- SLIDE END -->
+        <div class="swiper-slide projects-carousel__slide">
+          <div class="project-thumbnail">
+            <a href="" class="project-thumbnail__link">
+              <div class="project-thumbnail__img-wrapper">
+                <img src="/images/project-2.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="project-thumbnail__content">
+                <div class="project-thumbnail__content-inner">
+                  <h2 class="project-thumbnail__title">
+                    <span>Champagne Brocard</span>
+                  </h2>
+                  <p class="project-thumbnail__category">BROCHURE</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div> <!-- SLIDE END -->
+        <div class="swiper-slide projects-carousel__slide">
+          <div class="project-thumbnail">
+            <a href="" class="project-thumbnail__link">
+              <div class="project-thumbnail__img-wrapper">
+                <img src="/images/project-2.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="project-thumbnail__content">
+                <div class="project-thumbnail__content-inner">
+                  <h2 class="project-thumbnail__title">
+                    <span>Champagne Brocard</span>
+                  </h2>
+                  <p class="project-thumbnail__category">BROCHURE</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div> <!-- SLIDE END -->
+        <div class="swiper-slide projects-carousel__slide">
+          <div class="project-thumbnail">
+            <a href="" class="project-thumbnail__link">
+              <div class="project-thumbnail__img-wrapper">
+                <img src="/images/project-2.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="project-thumbnail__content">
+                <div class="project-thumbnail__content-inner">
+                  <h2 class="project-thumbnail__title">
+                    <span>Champagne Brocard</span>
+                  </h2>
+                  <p class="project-thumbnail__category">BROCHURE</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div> <!-- SLIDE END -->
       </div>
     </div>
   </div>

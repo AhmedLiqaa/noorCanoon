@@ -1,4 +1,5 @@
 {% extends '_layouts/base.nunjucks' %}
+{% set bodyClass = 'main-page'%}
 
 {% import "_modules/link/link.nunjucks" as link %}
 

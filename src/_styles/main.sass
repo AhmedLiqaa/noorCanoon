@@ -53,7 +53,8 @@ body
 //HEADER SECTION
 
 header
-
+  z-index: 1000
+  position: relative
   .scroll-progress
     position: fixed
     top: 50%
@@ -234,6 +235,7 @@ header
     position: relative
     display: inline-block
     vertical-align: middle
+    margin-right: 30px
     &::before
       content: ''
       display: block
@@ -262,12 +264,41 @@ header
       overflow: hidden
       border: 0
       white-space: nowrap
+  .social-wrapper
+    display: inline-block
+    vertical-align: middle
+    overflow: hidden
+    width: 300px
+    height: 30px
+    position: relative
+    font-family: Arial, Helvetica, sans-serif
+    .social
+      position: absolute
+      top: 6px
+      left: 0
+      transform: translateX(-100%)
+      transition: transform .6s cubic-bezier(.25,.05,.1,.94)
+      &__item
+        color: $sub-color 
+        font-size: .6rem
+        letter-spacing: .2em
+        text-transform: uppercase
+        display: inline-block
+        &:not(:last-child)
+          margin-right: 30px
+      &__link
+        color: $sub-color
+        transition: color .6s ease
+        &:hover
+          color: $main-color
 .main-social.is-open
   .main-social__button::before
     transform: rotate(90deg)
   .main-social__button::before,
   .main-social__button::after
     background: $sub-color
+  .social
+    transform: translateX(0%)
 
 .main-wrapper
   height: 100%
@@ -643,12 +674,57 @@ header
 
 //PRODUCTS PAGE SLIDER
 
+.projects
+  background-color: $border_color
+  min-height: 100vh
+  padding-top: 60px
+  padding-bottom: 60px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  overflow: hidden
+  .projects-wrapper
+    width: 100%
+
+  // .swiper-container
+  //   margin: 0 auto
+  //   position: relative
+  //   overflow: hidden
+  //   list-style: none
+  //   padding: 0
+  //   z-index: 1
+
 .project-thumbnail
   position: relative
   width: 380px
   &__link
     display: inline-block
     cursor: pointer
+    position: relative
+    &:hover
+      .project-thumbnail__img-wrapper
+        transform: scale(.95)
+      .project-thumbnail__img-wrapper
+        &::before
+          opacity: .5
+
+      
+  &__img-wrapper
+    position: relative
+    transition: transform .6s ease
+    &::before
+      content: ""
+      background-color: #000000
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      opacity: 0
+      transition: opacity .6s ease
 .swiper-wrapper
   display: flex
   position: relative
@@ -658,6 +734,58 @@ header
   transition-property: transform
   box-sizing: content-box
 
+
+.project-thumbnail
+  &__content
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+    opacity: 0
+    transition: opacity .8s ease
+  &__content-inner
+    max-width: 70%
+    text-align: center
+  &__title
+    display: inline-block
+    color: $border_color
+    font-family: Arial, Helvetica, sans-serif
+    font-size: 2.4rem
+    position: relative
+    line-height: 1.1
+    span
+      display: inline
+      border-bottom: 1px solid $border_color
+  &__category
+    display: block
+    color: $border_color
+    font-size: 1rem
+    text-transform: uppercase
+    margin-top: 20px
+    position: relative
+    font-family: Arial, Helvetica, sans-serif
+
+    
+
+.project-thumbnail
+  &__link
+    &:hover
+      .project-thumbnail
+        &__content
+          opacity: 1
+
+
+
+@media (min-width: 768px)
+  .projects-carousel
+    transform: translateY(-20px)
+
 .is-loaded .projects-carousel
   &__slide
     transform: translateX(0)
@@ -665,7 +793,43 @@ header
 
 .projects-carousel
   &__slide
-    width: auto
+    width: auto !important
     transform: translateX(200%)
     opacity: 0
     transition: transform .8s cubic-bezier(.25,.05,.1,.94),opacity .9s cubic-bezier(.2,.6,.35,1)
+    &:nth-child(2)
+      transition-delay: .1s
+    &:nth-child(3)
+      transition-delay: .2s
+    &:nth-child(4)
+      transition-delay: .3s
+    &:nth-child(5)
+      transition-delay: .4s
+    &:nth-child(6)
+      transition-delay: .5s
+    &:nth-child(7)
+      transition-delay: .6s
+
+.main-title-products
+  display: inline-block
+  color: $main-color
+  font-family: Arial, Helvetica, sans-serif
+  font-size: 7.95vw
+  position: relative
+  span 
+    &::after
+      content: ""
+      position: absolute
+      background-color: $main-color
+      width: 100%
+      height: 2px
+      bottom: -3px
+      left: 0
+      right: 0
+
+body.project-page
+  .scroll-progress
+    visibility: hidden
+    opacity: 0
+      
+

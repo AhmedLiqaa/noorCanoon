@@ -20,14 +20,14 @@
 
 </head>
 
-<body>
+<body class= '{{bodyClass}}'>
   <!--[if lt IE 11]>
     <p class="browsehappy">
       You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
     </p>
     <![endif]-->
   <header>
-    <a class="home" href="#">
+    <a class="home" href="/">
       <div>
         <img src="/images/logo_color.svg" alt="">
       </div>
@@ -77,6 +77,13 @@
           +
         </span>
       </button>
+      <div class="social-wrapper">
+        <ul class="social">
+          <li class="social__item"><a target="_blank" href="#" class="social__link">Linkedin</a></li>
+          <li class="social__item"><a target="_blank" href="#" class="social__link">Facebook</a></li>
+          <li class="social__item"><a target="_blank" href="#" class="social__link">Instagram</a></li>
+        </ul>
+      </div>
     </div>
   </header>
 

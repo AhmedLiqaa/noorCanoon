@@ -251,11 +251,14 @@ function Resize() {
 }
 Resize();
 
+const mainColImg = $('.js-mainscreen-col-img')
+
+console.log(mainColImg);
 
 function bannerImageScroll() {
   var bannerImgtl = new TimelineMax;
 
-  bannerImgtl.fromTo('.js-mainscreen-col-img', {
+  bannerImgtl.fromTo(mainColImg, {
     yPercent: 0,
     ease: 'power3.out'
   }, {
@@ -293,7 +296,7 @@ function changeColor() {
   const scene = new ScrollMagic.Scene({
     triggerElement: '.push-contact',
     triggerHook: 0.5
-  }).setClassToggle("body", "background-pink-white").addTo(animationController)
+  }).setClassToggle("body.main-page", "background-pink-white").addTo(animationController)
 }
 changeColor();
 
